@@ -1,0 +1,9 @@
+
+npm init -y  //Crea un json con info generica
+npm install -D typescript //instala typescript en el proyecto
+npm i @types/node --save-dev
+npx tsc --init //crea un compilador ts
+tsc //para compilar el codigo
+npm i --save-dev nodemon //compila cada vez que hay un cambio en js
+npm i --save-dev tsx //para compilar y mostrar en consola los archivos ts
+npm i --save-dev rimraf //instala la bibioteca que elimina los archivos que no se usan
