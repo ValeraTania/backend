@@ -7,3 +7,8 @@ tsc //para compilar el codigo
 npm i --save-dev nodemon //compila cada vez que hay un cambio en js
 npm i --save-dev tsx //para compilar y mostrar en consola los archivos ts
 npm i --save-dev rimraf //instala la bibioteca que elimina los archivos que no se usan
+npm i -D eslint @typescript-eslint/eslint-plugin @typescript-eslint/parser //biblioteca que ayuda a corregir problemas en el codigo (se configura manual)
+npm init @eslint/config@latest // instala y configura eslint (mejor opcion)
+npm i -D husky //libreria que ayuda a depurar bugs antes de subir a git
+postman o insomnia // instalar, se usa para simular los pedidos del frontend
+npm i express //ayuda a crear una api
