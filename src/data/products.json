@@ -1,5 +1,5 @@
 [
-    {"id": 0, "name": "black shoes", "description": "black shoes description text"},
-    {"id": 1, "name": "red dress", "description": "red dress description text"}
+    {"id": 0, "name": "black shoes", "description": "black shoes description text", "price": 50, "isActive": true},
+    {"id": 1, "name": "red dress", "description": "red dress description text", "price": 20, "isActive": true}
 
 ]
