@@ -12,3 +12,4 @@ npm init @eslint/config@latest // instala y configura eslint (mejor opcion)
 npm i -D husky //libreria que ayuda a depurar bugs antes de subir a git
 postman o insomnia // instalar, se usa para simular los pedidos del frontend
 npm i express //ayuda a crear una api
+npm i express-validator //libreria que ayuda a la validacion de datos (ex:email)

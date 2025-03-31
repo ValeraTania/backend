@@ -1,0 +1,6 @@
+ [
+    { "id": 0, "name": "Alex", "email": "alex@1gmail.com", "password": "123" },
+    { "id": 1, "name": "Tania", "email": "tania@1gmail.com", "password": "1234"  },
+    { "id": 2, "name": "Alexandra", "email": "alexandra@1gmail.com", "password": "12345"  },
+    { "id": 3, "name": "Adriana", "email": "adriana@1gmail.com", "password": "123456"  }
+  ]
