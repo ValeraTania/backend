@@ -2,6 +2,7 @@ import { Response, Request } from 'express';
 import { validationResult } from 'express-validator';
 import { readFileSync } from 'fs';
 import IUser from '../interfaces/userInterface.js';
+import userService from '../services/userService.js';
 
 let users: IUser[] = JSON.parse(readFileSync('./src/data/users.json', 'utf-8'));
 
@@ -13,7 +14,7 @@ class UserController {
 
   //get user by id
   getUserById(req: Request, res: Response) {
-    const userId = parseInt(req.params.id);
+    const userId = req.params.id;
     console.log('var userId', req.params.id);
     const foundUser = users.find((user) => user.id === userId);
 
@@ -24,16 +25,15 @@ class UserController {
   }
 
   // add user
-  register(req: Request, resp: Response) {
+  register = async (req: Request, resp: Response) => {
     const errors = validationResult(req);
-    console.log(errors);
+    // console.log(errors);
 
     if (!errors.isEmpty()) {
       resp.status(422).json({ errors: errors.array() });
     }
-
-    const foundUser = users.find((user) => user.email === email);
-    if (foundUser) {
+    const createdUserWithToken = await userService.register(req.body);
+    if (!errors.isEmpty()) {
       resp.status(400).json('User already exists');
     }
 
@@ -42,23 +42,16 @@ class UserController {
     // if (!validateEmail(email)) {
     //   resp.status(422).json({ errors: errors.array() });
     // }
-    const newUser: IUser = {
-      id: users.length + 1,
-      name: name,
-      email: email,
-      password: password,
-    };
 
-    users.push(newUser);
-    resp.status(201).send(newUser);
-  }
+    resp.status(201).send(createdUserWithToken);
+  };
 
   //get user by name
   getUserByName(req: Request, res: Response) {
     const userName = req.params.name;
     //  console.log('param name', req.params.name);
-
     const foundUserByName = users.find((user) => user.name === userName);
+
     //console.log('var user by name',foundUserByName);
 
     if (!foundUserByName) {
@@ -69,7 +62,7 @@ class UserController {
 
   //deletes a user
   delete(req: Request, res: Response) {
-    const userToDelete = parseInt(req.params.name);
+    const userToDelete = req.params.id;
     const userDelete = users.filter((user) => user.id !== userToDelete);
 
     if (!userDelete) {

@@ -13,3 +13,7 @@ npm i -D husky //libreria que ayuda a depurar bugs antes de subir a git
 postman o insomnia // instalar, se usa para simular los pedidos del frontend
 npm i express //ayuda a crear una api
 npm i express-validator //libreria que ayuda a la validacion de datos (ex:email)
+npm i uuid //instala biblioteca que crea ids unicos
+npm i jsonwebtoken // crea tokens
+npm install --save @types/jsonwebtoken //instala los tipos para trabajar con los tokens
+npm i dotenv //biblioteca para leer variables de environment

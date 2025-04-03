@@ -22,7 +22,8 @@ class ProductController {
   create = async (req: Request, res: Response) => {
     try {
         const newProduct = req.body;
-        res.status(201).json(newProduct);
+        const createdProduct = productService.create(newProduct);
+        res.status(201).json(createdProduct);
       } catch (error: unknown) {
         if (error instanceof Error) {
           console.log(`Can't create the products ${error.message}`);

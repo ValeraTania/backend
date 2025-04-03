@@ -2,6 +2,7 @@ import { Router } from 'express';
 import { check, validationResult } from 'express-validator';
 import { error } from 'console';
 import userController from '../controllers/userController.js';
+import authMiddleware from '../middlewares/authMiddleware.js';
 
 const msg: string = 'Hi, my first backend project';
 console.log(msg);
@@ -11,7 +12,7 @@ const router = Router();
 // router.use(express.json());
 
 //get all users
-router.get('/users', userController.getUsers);
+router.get('/users',authMiddleware, userController.getUsers);
 
 //get user by id
 router.get('/users/:id', userController.getUserById);
@@ -25,7 +26,8 @@ router.get('/users/:id', userController.getUserById);
 
 //register new user
 //middleware to validate user data
-router.post('/users/register',
+router.post(
+  '/users/register',
   [
     check('email').isEmail().withMessage('Invalid email'),
     check('password').isStrongPassword().withMessage('Pass should be strong'),

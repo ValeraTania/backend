@@ -1,8 +1,14 @@
 interface IUser {
-    id: number;
-    name: string;
-    email: string;
-    password: string
-  }
+  id: string;
+  name: string;
+  email: string;
+  password: string;
+  roles: Role
+}
 
-  export default IUser;
+export enum Role {
+  ADMIN = 'Administrator',
+  USER = 'User',
+}
+
+export default IUser;
