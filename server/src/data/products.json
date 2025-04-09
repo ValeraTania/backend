@@ -1,0 +1,38 @@
+[
+  {
+    "id": "",
+    "title": "Essence Mascara Lash Princess",
+    "description": "The Essence Mascara Lash Princess is a popular mascara known for its volumizing and lengthening effects. Achieve dramatic lashes with this long-lasting and cruelty-free formula.",
+    "category": "beauty",
+    "price": 9.99,
+    "image": "/no-image.png",
+    "rating": {
+      "rate": 4.7,
+      "count": 5
+    }
+  },
+  {
+    "id": "9ef1d839-4c7d-44a8-9b84-ac37a38814f9",
+    "title": "Essence Mascara Lash Princess",
+    "description": "The Essence Mascara Lash Princess is a popular mascara known for its volumizing and lengthening effects. Achieve dramatic lashes with this long-lasting and cruelty-free formula.",
+    "category": "beauty",
+    "price": 9.99,
+    "image": "/no-image.png",
+    "rating": {
+      "rate": 4.7,
+      "count": 5
+    }
+  },
+  {
+    "title": "Essence Mascara Lash Princess",
+    "description": "The Essence Mascara Lash Princess is a popular mascara known for its volumizing and lengthening effects. Achieve dramatic lashes with this long-lasting and cruelty-free formula.",
+    "category": "beauty",
+    "price": 9.99,
+    "image": "/no-image.png",
+    "rating": {
+      "rate": 4.7,
+      "count": 5
+    },
+    "id": "03cdc9c4-4d55-4838-8bdc-342f1a44e282"
+  }
+]

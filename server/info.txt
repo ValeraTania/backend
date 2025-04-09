@@ -1,0 +1,23 @@
+
+npm init -y  //Crea un json con info generica
+npm install -D typescript //instala typescript en el proyecto
+npm i @types/node --save-dev
+npx tsc --init //crea un compilador ts
+tsc //para compilar el codigo
+npm i --save-dev nodemon //compila cada vez que hay un cambio en js
+npm i --save-dev tsx //para compilar y mostrar en consola los archivos ts
+npm i --save-dev rimraf //instala la bibioteca que elimina los archivos que no se usan
+npm i -D eslint @typescript-eslint/eslint-plugin @typescript-eslint/parser //biblioteca que ayuda a corregir problemas en el codigo (se configura manual)
+npm init @eslint/config@latest // instala y configura eslint (mejor opcion)
+npm i -D husky //libreria que ayuda a depurar bugs antes de subir a git
+postman o insomnia // instalar, se usa para simular los pedidos del frontend
+npm i express //ayuda a crear una api
+npm i express-validator //libreria que ayuda a la validacion de datos (ex:email)
+npm i uuid //instala biblioteca que crea ids unicos
+npm i jsonwebtoken // crea tokens
+npm install --save @types/jsonwebtoken //instala los tipos para trabajar con los tokens
+npm i dotenv //biblioteca para leer variables de environment
+npm i http-server //permite crear un servidor
+npx http-server //ejecuta el servidor
+npm i cors // instala libreria cors
+npm i @types/cors --save-dev //instala los tipos para la libreria cors

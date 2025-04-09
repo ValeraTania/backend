@@ -1,0 +1,47 @@
+[
+  {
+    "id": "2",
+    "title": "Galaxy Tab S7",
+    "description": "A high-performance tablet with a large screen.",
+    "price": 699.99,
+    "image_url": "no-image.jpg",
+    "brand": "Samsung",
+    "type": "Tablet"
+  },
+  {
+    "id": "3",
+    "title": "Pixelbook Go",
+    "description": "A lightweight and powerful laptop for productivity.",
+    "price": 899.99,
+    "image_url": "no-image.jpg",
+    "brand": "Google",
+    "type": "Laptop"
+  },
+  {
+    "id": "4",
+    "title": "WH-1000XM4",
+    "description": "High-quality noise-canceling headphones.",
+    "price": 349.99,
+    "image_url": "no-image.jpg",
+    "brand": "Sony",
+    "type": "Headphones"
+  },
+  {
+    "id": "5",
+    "title": "Mi Watch",
+    "description": "A feature-packed smartwatch for fitness enthusiasts.",
+    "price": 199.99,
+    "image_url": "no-image.jpg",
+    "brand": "Xiaomi",
+    "type": "Smartwatch"
+  },
+  {
+    "id": "6",
+    "title": "Surface Laptop 4",
+    "description": "A premium laptop with excellent performance.",
+    "price": 1299.99,
+    "image_url": "no-image.jpg",
+    "brand": "Microsoft",
+    "type": "Laptop"
+  }
+]
