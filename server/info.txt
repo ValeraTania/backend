@@ -21,3 +21,5 @@ npm i http-server //permite crear un servidor
 npx http-server //ejecuta el servidor
 npm i cors // instala libreria cors
 npm i @types/cors --save-dev //instala los tipos para la libreria cors
+npm i express-fileupload // instala libreria para manejar archivos de img
+npm i --save-dev @types/express-fileupload //instala los tipos

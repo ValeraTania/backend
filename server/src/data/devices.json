@@ -1,47 +1,56 @@
 [
   {
-    "id": "2",
-    "title": "Galaxy Tab S7",
-    "description": "A high-performance tablet with a large screen.",
-    "price": 699.99,
-    "image_url": "no-image.jpg",
-    "brand": "Samsung",
-    "type": "Tablet"
-  },
-  {
     "id": "3",
     "title": "Pixelbook Go",
     "description": "A lightweight and powerful laptop for productivity.",
     "price": 899.99,
-    "image_url": "no-image.jpg",
+    "image_url": "no-image.png",
     "brand": "Google",
     "type": "Laptop"
   },
   {
-    "id": "4",
-    "title": "WH-1000XM4",
-    "description": "High-quality noise-canceling headphones.",
-    "price": 349.99,
-    "image_url": "no-image.jpg",
-    "brand": "Sony",
-    "type": "Headphones"
+    "title": "Teste para inserir img",
+    "description": "testing adding img",
+    "price": "500",
+    "brand": "Apple",
+    "type": "Laptop",
+    "image_url": "no-image.png",
+    "id": "f317e8d7-e226-4074-953c-9ecf258a2f3b"
   },
   {
-    "id": "5",
-    "title": "Mi Watch",
-    "description": "A feature-packed smartwatch for fitness enthusiasts.",
-    "price": 199.99,
-    "image_url": "no-image.jpg",
-    "brand": "Xiaomi",
-    "type": "Smartwatch"
+    "title": "Teste para inserir img",
+    "description": "testing adding img",
+    "price": "500",
+    "brand": "Apple",
+    "type": "Laptop",
+    "image_url": "no-image.png",
+    "id": "3b2a3f63-52b5-44be-ba11-f42fb8ed747e"
   },
   {
-    "id": "6",
-    "title": "Surface Laptop 4",
-    "description": "A premium laptop with excellent performance.",
-    "price": 1299.99,
-    "image_url": "no-image.jpg",
-    "brand": "Microsoft",
-    "type": "Laptop"
+    "title": "Teste para inserir img",
+    "description": "testing adding img",
+    "price": "500",
+    "brand": "Apple",
+    "type": "Laptop",
+    "image_url": "no-image.png",
+    "id": "a32379bc-ab9c-4cd0-84a9-6bd7b1d39a58"
+  },
+  {
+    "title": "Teste para inserir img",
+    "description": "testing adding img",
+    "price": "500",
+    "brand": "Apple",
+    "type": "Laptop",
+    "image_url": "ce5d571f-55f3-4cb5-87c6-f3f035328ad8.jpeg",
+    "id": "25b7c70b-3ca0-405e-ae30-70a8743f3c68"
+  },
+  {
+    "title": "Teste para inserir img",
+    "description": "testing adding img",
+    "price": "500",
+    "brand": "Apple",
+    "type": "Laptop",
+    "image_url": "949d5a18-2518-4efb-9c74-f222862db9c0.jpeg",
+    "id": "720f3593-908e-45b4-8e0e-c316f144c45e"
   }
 ]

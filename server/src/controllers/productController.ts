@@ -1,11 +1,12 @@
 import { Request, Response } from 'express';
 import IProduct from '../interfaces/productInterface.js';
 import productService from '../services/productServices.js';
+import fileUpload from 'express-fileupload';
 
 class ProductController {
   getAll = async (req: Request, res: Response) => {
     try {
-      const { page = 1, limit = 10, type = 'all', brand = 'all', query } = req.query;
+      const { page = 1, limit = 20, type = 'all', brand = 'all', query } = req.query;
 
       let products: IProduct[] = await productService.getAll();
 
@@ -25,6 +26,11 @@ class ProductController {
       const endIndex = pageNumber * limitNumber;
 
       products = products.slice(startIndex, endIndex);
+
+      products = products.map((product) => ({
+        ...product,
+        image_url: `${req.protocol}://${req.get('host')}/${product.image_url}`,
+      }));
 
       res.json(products);
     } catch (error: unknown) {
@@ -74,7 +80,8 @@ class ProductController {
   create = async (req: Request, res: Response) => {
     try {
       const newProduct = req.body;
-      const createdProduct = productService.create(newProduct);
+      const image = req.files?.image;
+      const createdProduct = await productService.create(newProduct, image);
       res.status(201).json(createdProduct);
     } catch (error: unknown) {
       if (error instanceof Error) {

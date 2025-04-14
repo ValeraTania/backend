@@ -4,6 +4,7 @@ import jsonFileReader from '../utils/jsonFileReader.js';
 import { v4 as uuidv4 } from 'uuid';
 import productController from '../controllers/productController.js';
 const productFilePath = './src/data/devices.json';
+import fileUpload from '../utils/fileUpload.js';
 
 class ProductService {
   private read(): IProduct[] {
@@ -37,13 +38,21 @@ class ProductService {
     if (!foundProduct) {
       return null;
     }
+    if(foundProduct.image_url && foundProduct.image_url !== 'no-image.png') {
+await fileUpload.delete(foundProduct.image_url);
+    }
     products = products.filter((product) => product.id !== id);
     this.write(products);
     return foundProduct;
   };
 
-  create = async (newProduct: IProduct): Promise<IProduct> => {
+  create = async (newProduct: IProduct, image: any): Promise<IProduct> => {
     try {
+      newProduct.image_url = 'no-image.png';
+
+      if(image){
+        newProduct.image_url = await fileUpload.save(image);
+      }
       const products: IProduct[] = this.read();
       newProduct.id = uuidv4();
       products.push(newProduct);
