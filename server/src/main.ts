@@ -21,6 +21,7 @@ app.use('/prod', productRouter);
 app.use(express.static('static'));
 
 
+
 app.listen(PORT, () => {
   console.log(`server on port ${PORT}!!!`);
 });

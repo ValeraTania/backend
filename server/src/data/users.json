@@ -1,110 +1,21 @@
 [
   {
-    "id": "0",
-    "name": "Alex",
-    "email": "alex@1gmail.com",
-    "password": "123"
-  },
-  {
-    "id": "1",
-    "name": "Tania",
-    "email": "tania@1gmail.com",
-    "password": "1234"
-  },
-  {
-    "id": "2",
-    "name": "Alexandra",
-    "email": "alexandra@1gmail.com",
-    "password": "12345"
-  },
-  {
-    "id": "3",
-    "name": "Adriana",
-    "email": "adriana@1gmail.com",
-    "password": "123456"
-  },
-  {
-    "name": "Marce",
-    "email": "marce@g.com",
-    "password": "123fgdfhf",
-    "roles": "[ADMIN]",
-    "id": "8dfecd0d-3c38-4fd9-ace5-47eeebb3a4b8"
-  },
-  {
-    "name": "Marce",
-    "email": "marce@g.com",
-    "password": "123fgdfhf$",
-    "roles": "[ADMIN]",
-    "id": "43121910-b1e2-4915-a1e0-6c9cb75ff8b3"
-  },
-  {
-    "name": "Marce",
-    "email": "marce@g.com",
-    "password": "123fgdFhf$",
-    "roles": "[ADMIN]",
-    "id": "f3cf31ea-35bf-4b71-908a-cf5a3dda0a86"
-  },
-  {
-    "name": "Marce",
-    "email": "marce@g.com",
-    "password": "123fgdFhf$",
-    "roles": "[ADMIN]",
-    "id": "dc091cf1-fc94-4953-a581-c6428077d90e"
-  },
-  {
-    "name": "Marce",
-    "email": "marce@mg.com",
-    "password": "123fgdFhf$",
-    "roles": "[ADMIN]",
-    "id": "444de7a4-c691-4e33-8a3b-da328d8fe271"
-  },
-  {
-    "name": "Marce",
-    "email": "marce@mg.com",
-    "password": "123fgdFhf$",
-    "roles": "[ADMIN]",
-    "id": "022fb5dd-47ab-4b16-95c6-bf7730254112"
-  },
-  {
-    "name": "Marce",
-    "email": "marce@mg.com",
-    "password": "123fgdFhf$",
-    "roles": "[ADMIN]",
-    "id": "26deedf5-7a61-4072-87fe-86015571fc69"
-  },
-  {
-    "name": "Marce",
-    "email": "marce63@mg.com",
-    "password": "123fgdFhf$",
-    "roles": "[ADMIN]",
-    "id": "151d7ff8-0927-46a9-af0d-255858e94be4"
-  },
-  {
-    "name": "Marce",
-    "email": "marce600@mg.com",
-    "password": "123fgdFhf$",
-    "roles": "[ADMIN]",
-    "id": "9cdb1b34-204f-41c8-8cc6-05ea1f42a859"
-  },
-  {
-    "name": "Marce",
-    "email": "marce601@mg.com",
-    "password": "123fgdFhf$",
-    "roles": "[ADMIN]",
-    "id": "a46499a2-b4c9-4937-8780-dc472c37be0a"
-  },
-  {
-    "name": "Marce",
-    "email": "marce601@mg.com",
-    "password": "123fgdFhf$",
-    "roles": "[ADMIN]",
-    "id": "6714aa76-e76b-45f7-9474-b9aeb8547377"
-  },
-  {
     "name": "Marce",
     "email": "marce6091@mg.com",
     "password": "123fgdFhf$",
-    "roles": "[ADMIN]",
+    "roles": [],
     "id": "280bb6d7-8cb2-4da6-93b9-c9de298a060d"
+  },
+  {
+    "name": "Pepe",
+    "email": "marce6091@mg.com",
+    "password": "$2b$07$3Qid3wMnMnAUdoJdhSH7Ie4go1gEwbgOS05Uqn02ff1eQ.7MImSoW",
+    "id": "5044b5c9-aa41-404c-b35a-d77bf584222f"
+  },
+  {
+    "name": "Pepe Frog",
+    "email": "marce60911@mg.com",
+    "password": "$2b$07$1iMnnRYjU9TFiGOtLao/8u8ZOoHS/oC0ZUXRH4WhFSY9lXjYPamhm",
+    "id": "7ae42801-037b-4ed9-b8e9-70f3e722f880"
   }
 ]

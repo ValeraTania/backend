@@ -28,8 +28,10 @@ class ProductService {
   getAll = async () => {
     return this.read();
   };
+
   getById = async () => {};
   update = async () => {};
+
   delete = async (id: string) => {
     let products = this.read();
 
@@ -38,8 +40,8 @@ class ProductService {
     if (!foundProduct) {
       return null;
     }
-    if(foundProduct.image_url && foundProduct.image_url !== 'no-image.png') {
-await fileUpload.delete(foundProduct.image_url);
+    if (foundProduct.image_url && foundProduct.image_url !== 'no-image.png') {
+      await fileUpload.delete(foundProduct.image_url);
     }
     products = products.filter((product) => product.id !== id);
     this.write(products);
@@ -50,7 +52,7 @@ await fileUpload.delete(foundProduct.image_url);
     try {
       newProduct.image_url = 'no-image.png';
 
-      if(image){
+      if (image) {
         newProduct.image_url = await fileUpload.save(image);
       }
       const products: IProduct[] = this.read();

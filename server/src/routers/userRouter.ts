@@ -12,7 +12,7 @@ const router = Router();
 // router.use(express.json());
 
 //get all users
-router.get('/users',authMiddleware, userController.getUsers);
+router.get('/users', authMiddleware, userController.getUsers);
 
 //get user by id
 router.get('/users/:id', userController.getUserById);
@@ -39,15 +39,20 @@ router.post(
 );
 
 //get a user by name
-router.get('users/name/:name', userController.getUserByName);
+router.get('/users/name/:name', userController.getUserByName);
 
 //deletes a user
-router.delete('users/:id', userController.delete);
+router.delete('/users/:id', userController.delete);
 
 //login + validation of password
-router.post('users/login', [
-  check('email').isEmail().withMessage('Invalid email'),
-  check('password').isStrongPassword().withMessage('Invalid password'),
-]);
+router.post(
+  '/users/login',
+  [
+    check('email').isEmail().withMessage('Invalid email'),
+    check('password').isStrongPassword().withMessage('Invalid password'),
+  ],
+  userController.login,
+  
+);
 
 export default router;

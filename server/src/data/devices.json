@@ -23,24 +23,6 @@
     "price": "500",
     "brand": "Apple",
     "type": "Laptop",
-    "image_url": "no-image.png",
-    "id": "3b2a3f63-52b5-44be-ba11-f42fb8ed747e"
-  },
-  {
-    "title": "Teste para inserir img",
-    "description": "testing adding img",
-    "price": "500",
-    "brand": "Apple",
-    "type": "Laptop",
-    "image_url": "no-image.png",
-    "id": "a32379bc-ab9c-4cd0-84a9-6bd7b1d39a58"
-  },
-  {
-    "title": "Teste para inserir img",
-    "description": "testing adding img",
-    "price": "500",
-    "brand": "Apple",
-    "type": "Laptop",
     "image_url": "ce5d571f-55f3-4cb5-87c6-f3f035328ad8.jpeg",
     "id": "25b7c70b-3ca0-405e-ae30-70a8743f3c68"
   },

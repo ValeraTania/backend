@@ -3,6 +3,7 @@ import { validationResult } from 'express-validator';
 import { readFileSync } from 'fs';
 import IUser from '../interfaces/userInterface.js';
 import userService from '../services/userService.js';
+import { error } from 'console';
 
 let users: IUser[] = JSON.parse(readFileSync('./src/data/users.json', 'utf-8'));
 
@@ -26,35 +27,31 @@ class UserController {
 
   // add user
   register = async (req: Request, resp: Response) => {
-    try{
+    try {
       const errors = validationResult(req);
-    // console.log(errors);
+      // console.log(errors);
 
-    if (!errors.isEmpty()) {
-      resp.status(422).json({ errors: errors.array() });
-    }
-    const createdUserWithToken = await userService.register(req.body);
-    if (!createdUserWithToken) {
-      resp.status(404).json('User already exists');
-    }
-
-    const { name, email, password } = req.body;
-
-    // if (!validateEmail(email)) {
-    //   resp.status(422).json({ errors: errors.array() });
-    // }
-
-    resp.status(201).send(createdUserWithToken);
-
-    }
-
-    catch(error: unknown){
-      if(error instanceof Error){
-        console.log(`Can't create a new user: ${error.message}`);
+      if (!errors.isEmpty()) {
+        resp.status(422).json({ errors: errors.array() });
+      }
+      const createdUserWithToken = await userService.register(req.body);
+      if (!createdUserWithToken) {
+        resp.status(404).json('User already exists');
       }
 
+      const { name, email, password } = req.body;
+
+      // if (!validateEmail(email)) {
+      //   resp.status(422).json({ errors: errors.array() });
+      // }
+
+      resp.status(201).send(createdUserWithToken);
+    } catch (error: unknown) {
+      if (error instanceof Error) {
+        console.log(`Can't create a new user: ${error.message}`);
+      }
     }
-      };
+  };
 
   //get user by name
   getUserByName(req: Request, res: Response) {
@@ -83,17 +80,34 @@ class UserController {
   }
 
   //login + validation of password
-  login(req: Request, res: Response) {
-    const { email: userEmail, password: userPass } = req.body;
-    const errors = validationResult(req);
-    const validLogin = users.find((user) => user.email === userEmail);
-    const pass = validLogin?.password;
+  async login(req: Request, res: Response) {
+    try {
+      const { email, password } = req.body;
+      const errors = validationResult(req);
+      // const validLogin = users.find((user) => user.email === userEmail);
 
-    if (!userEmail || userPass !== pass) {
-      res.status(422).json({ errors: errors.array() });
+      if (!errors.isEmpty()) {
+        res.status(422).json({ errors: errors.array() });
+        return;
+      }
+      // const pass = validLogin?.password;
+
+      // if (!userEmail || userPass !== pass) {
+      //   res.status(422).json({ errors: errors.array() });
+      // }
+
+      const foundUserWithToken = await userService.login(email, password);
+      if (!foundUserWithToken) {
+        res.status(404).json({ error: 'Failed login' });
+        return;
+      }
+      res.status(200).json(foundUserWithToken);
+    } catch (error: unknown) {
+      if (error instanceof Error) {
+        console.log(`Can't login a user:  ${error.message}`);
+      }
+      res.status(500).json("Can't create a user");
     }
-
-    res.status(200).send(validLogin);
   }
 }
 

@@ -23,3 +23,14 @@ npm i cors // instala libreria cors
 npm i @types/cors --save-dev //instala los tipos para la libreria cors
 npm i express-fileupload // instala libreria para manejar archivos de img
 npm i --save-dev @types/express-fileupload //instala los tipos
+npm i bcrypt //libreria para encriptar password de la BD
+npm i --save-dev @types/bcrypt //instala los tipos
+
+
+============================================
+BD comandos Mongo
+show databases // muestra la lista de BD's
+db.createCollection('users'); // crea una nueva coleccion
+show collections // muestra las colecciones
+db.users.insertOne({name:"Tania"})  //add a users
+db.users.find() //find users
