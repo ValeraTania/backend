@@ -23,4 +23,10 @@ router.get('/products/types', productController.getTypes);
 //get brands of products
 router.get('/products/brands', productController.getBrands);
 
+//get product by id
+router.get('/products/:id', productController.getById);
 export default router;
+
+//update a product
+router.put('/products/:id', productController.update);
+

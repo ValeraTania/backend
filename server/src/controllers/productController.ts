@@ -55,15 +55,33 @@ class ProductController {
     res.json(uniqueBrands);
   };
 
-  getById = async (req: Request, res: Response) => {};
-  update = async (req: Request, res: Response) => {};
+  getById = async (req: Request, res: Response) => {
+    const { id } = req.params;
+    const foundProduct = await productService.getById(id);
+    res.json(foundProduct);
+  };
+
+  update = async (req: Request, res: Response) => {
+    try {
+      const {id} = req.params;
+      const updatedProduct = await productService.update(id, req.body);
+    
+      res.status(201).json(updatedProduct);
+    } catch (error: unknown) {
+      if (error instanceof Error) {
+        console.log(`Can't update the products ${error.message}`);
+      }
+      res.status(500).json({error: 'Failed to update product'});
+    }
+  };
 
   deleteProduct = async (req: Request, res: Response) => {
     try {
-      const products: IProduct[] = await productService.getAll();
+    //  const products: IProduct[] = await productService.getAll();
       const productToDelete = req.params.id;
+      const token = req.headers.authorization || '';
       // console.log(productToDelete);
-      const deletedProduct = await productService.delete(productToDelete);
+      const deletedProduct = await productService.delete(productToDelete, token);
 
       if (!deletedProduct) {
         res.status(404).json({ error: 'Product not found' });

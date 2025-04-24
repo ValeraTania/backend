@@ -4,9 +4,6 @@ import { error } from 'console';
 import userController from '../controllers/userController.js';
 import authMiddleware from '../middlewares/authMiddleware.js';
 
-const msg: string = 'Hi, my first backend project';
-console.log(msg);
-
 const router = Router();
 // const router = express.Router();
 // router.use(express.json());
@@ -52,7 +49,6 @@ router.post(
     check('password').isStrongPassword().withMessage('Invalid password'),
   ],
   userController.login,
-  
 );
 
 export default router;

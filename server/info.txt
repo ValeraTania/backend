@@ -34,3 +34,27 @@ db.createCollection('users'); // crea una nueva coleccion
 show collections // muestra las colecciones
 db.users.insertOne({name:"Tania"})  //add a users
 db.users.find() //find users
+db.users.insertMany([{name: "Julia", age: 20},{name:"Pedro", age:40}, {name: "Olga", age:100}]);
+db.users.find({  //find users with age = 30 or 36
+    $or: [
+        {age:30},
+        {age:36}
+    ]
+});
+db.users.find({  //find users with age = 30 and name pedro 
+    $and: [
+        {age:30},
+        {name:"Pedro"}
+    ]
+});
+db.users.find({age: {$gt:20}}) // find users with age>20
+db.users.find({age: {$lte:20}}) // find users with age <=20
+db.users.find().sort({age:1}) //order by age asc
+db.users.find().sort({age:-1}) //order by age desc
+db.users.find().limit(3); //only shows the first 3 user
+db.users.find().skip(3) // shows users skipping the first 3
+db.users.countDocuments() // counts the amount of elements in the collection
+db.users.updateOne({name: "Tania"}, {$set: {age: 32}}); //updates the age of Tania
+
+npm install mongoose //libreria para ligar BD al proyecto
+npm i @types/mongoose --save-dev //instala los tipos
