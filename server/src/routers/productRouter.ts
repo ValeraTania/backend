@@ -15,7 +15,7 @@ router.get('/products', productController.getAll);
 router.post('/products', productController.create);
 
 //delete a product
-router.delete('/products/:id',authMiddleware, productController.deleteProduct);
+router.delete('/products/:id',authMiddleware(['admin','user']), productController.deleteProduct);
 
 //get types of products
 router.get('/products/types', productController.getTypes);
